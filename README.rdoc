@@ -1,0 +1,5 @@
+= TwitterBootstrapHelper
+
+To be documented. The helper class is pretty self explanitory.
+
+This project rocks and uses MIT-LICENSE.
