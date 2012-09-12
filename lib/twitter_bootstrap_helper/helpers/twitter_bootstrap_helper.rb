@@ -45,8 +45,6 @@ module TwitterBootstrapHelper
         type: :submit,
     }.merge(options || {})
 
-    options = options.nil? ? default_options : default_options.merge(options)
-
     icon = nil
     if options[:icon]
       icon = options[:icon]
