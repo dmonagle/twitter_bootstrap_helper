@@ -1,5 +1,29 @@
 = TwitterBootstrapHelper
 
-Refer to the rdoc documentation for this helper.
+Refer to the rdoc documentation for this helper. I'm working on more examples.
 
 This project rocks and uses MIT-LICENSE.
+
+== Navs
+
+Navs require a bit of HTML to create. These helpers make it a little easier.
+
+    <%= tb_nav do %>
+        <%= tb_nav_item(:dropdown => "Options", :html => {:id => "options-dropdown-button"}) do %>
+            <%= tb_nav(:dropdown_menu, :html => {:id => "options-dropdown"}) do %>
+                <%= tb_nav_item tb_link("Option 1", "#")) %>
+                <%= tb_nav_item tb_link("Option 2", "#")) %>
+                <%= tb_nav_item :divider %>
+                <%= tb_nav_item tb_link(" Option 3", "#", :icon => "icon-ok")) %>
+            <% end %>
+        <% end %>
+        <span class="btn-group pull-left">
+          <%= tb_link("", "#", :icon => "icon-minus", :class => "btn", :id => "zoom-out-button") %>
+          <%= tb_link("", "#", :icon => "icon-plus", :class => "btn", :id => "zoom-in-button") %>
+        </span>
+    <% end %>
+
+== Modals
+
+There are a couple of helpers to assist with creating and activating modals
+
