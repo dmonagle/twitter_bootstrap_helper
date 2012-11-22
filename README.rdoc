@@ -25,5 +25,18 @@ Navs require a bit of HTML to create. These helpers make it a little easier.
 
 == Modals
 
-There are a couple of helpers to assist with creating and activating modals
+There are a couple of helpers to assist with creating and activating modals. One to create a button to activate a modal, and one to create the modal and the content itself.
 
+The tb_modal_button helper takes the same options as tb_link
+
+    <%= tb_modal_button " Edit", "editModal", :class => "btn btn-success", :icon => "icon-edit" %>
+
+For the actual modal, use tb_modal
+
+    <%= tb_modal "editModal", "Content of the modal", title: "Edit", ok_id: "submit-button", ok_label: "Save", ok_link: edit_object_path(@object), ok_class: "btn btn-success" %>
+
+You can also use it as a block:
+
+    <%= tb_modal "editModal", title: "Edit", ok_id: "submit-button", ok_label: "Save", ok_link: edit_object_path(@object), ok_class: "btn btn-success" do %>
+        Modal Content
+    <% end %>
